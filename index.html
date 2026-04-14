@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Niaina | Software Engineer Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="text-white selection:bg-purple-500/30">
+
+    <nav class="fixed top-0 w-full z-50 bg-[#05010d]/80 backdrop-blur-md border-b border-white/5">
+        <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
+            
+            <!-- Logo -->
+            <div>
+                <a href="#home" class="text-white text-2xl font-bold text-white cursor-pointer transition">
+                    Portfolio
+                </a>
+            </div>
+
+            <!-- Desktop menu -->
+            <div class="hidden md:flex space-x-10 text-sm font-medium text-gray-400">
+                <!-- <a href="#home" class="hover:text-white transition">Home</a> -->
+                <a href="#apropos" class="hover:text-white transition">Présentation</a>
+                <a href="#formation" class="hover:text-white transition">Formation</a>
+                <a href="#experiences" class="hover:text-white transition">Expériences</a>
+                <a href="#competences" class="hover:text-white transition">Compétences</a>
+                <a href="#interets" class="hover:text-white transition">Interêts</a>
+                <a href="#contact" class="hover:text-white transition">Contact</a>
+            </div>
+
+            <!-- Burger button -->
+            <button id="menu-btn" class="md:hidden text-white text-2xl">
+                ☰
+            </button>
+        </div>
+
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="fixed top-0 left-0 w-full h-screen bg-[#05010d] flex flex-col items-center justify-center space-y-8 text-white text-xl transform translate-x-full transition-transform duration-300">
+
+            <!-- Close button -->
+            <button id="close-btn" class="absolute top-6 right-6 text-3xl">
+                ✕
+            </button>
+
+            <a href="#home" class="menu-link">Home</a>
+            <a href="#apropos" class="menu-link">¨Présentation</a>
+            <a href="#formation" class="menu-link">Formation</a>
+            <a href="#experiences" class="menu-link">Expériences</a>
+            <a href="#competences" class="menu-link">Compétences</a>
+            <a href="#interets" class="menu-link">Interêts</a>
+            <a href="#contact" class="menu-link">Contact</a>
+        </div>
+    </nav>
+
+    <section id="home" class="relative max-w-6xl mx-auto pt-40 pb-20 px-6">
+    
+        <!-- Background effect -->
+        <div class="absolute top-20 left-1/4 w-96 h-96 bg-purple-600/10 blur-[120px] rounded-full -z-10"></div>
+
+        <!-- Container -->
+        <div class="flex flex-col md:flex-row items-center gap-12">
+
+            <!-- LEFT: TEXT -->
+            <div class="flex-1">
+
+                <p class="text-purple-400 font-medium mb-6 tracking-wide">
+                    <span class="w-8 h-[1px] bg-purple-400"></span> 
+                    Bonjour! Je suis 
+                    <span class="text-white font-bold text-lg">RASOAMIARAMANANA Tsiriniaina</span>
+                </p>
+                
+                <h1 class="text-4xl md:text-4xl font-extrabold leading-[1.1] mb-10">
+                    Un développeur qui <br />
+                    <span class="text-gray-400">crée des applications</span> <br />
+                    avec 
+                    <span class="italic text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400 underline decoration-purple-500/20">
+                        passion...
+                    </span>
+                </h1>
+
+                <div class="space-y-6 text-lg md:text-xl text-gray-400 max-w-xl leading-relaxed">
+                    <h2 class="text-2xl md:text-3xl font-semibold text-white">
+                        Je suis un développeur web junior.
+                    </h2>
+                    <p>
+                        Passionné par les nouvelles technologies et les bonnes pratiques de développement, 
+                        je cherche à concevoir des solutions fiables, performantes et évolutives. 
+                        Sérieux et impliqué, je m’investis pleinement dans des projets concrets 
+                        avec la volonté constante d’apprendre et de progresser rapidement.
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- RIGHT: IMAGE (hidden on mobile) -->
+            <div class="flex-1 hidden md:flex justify-center">
+
+                <div class="relative inline-block">
+                    <div class="absolute -inset-2 bg-gradient-to-r from-purple-600 to-blue-600 blur-2xl opacity-20 rounded-full"></div>
+                    
+                    <img 
+                        src="https://api.dicebear.com/7.x/avataaars/svg?seed=Niaina&mouth=smile" 
+                        alt="Avatar" 
+                        class="relative w-48 h-48 rounded-3xl border border-white/10 bg-[#0a051a] p-2 float-animation"
+                    />
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="apropos" class="max-w-4xl mx-auto py-24 px-6 text-center">
+
+        <!-- Titre -->
+        <h2 class="text-3xl md:text-5xl font-bold text-white mb-6">
+            À propos de moi
+        </h2>
+
+        <!-- Sous-titre décoratif -->
+        <div class="w-20 h-1 bg-gradient-to-r from-purple-500 to-blue-500 mx-auto mb-10 rounded-full"></div>
+
+        <!-- Texte -->
+        <div class="space-y-6 text-gray-400 text-lg leading-relaxed">
+
+            <p>
+                Avant toute chose, permettez-moi de me présenter. 
+                J’ai 26 ans et je suis diplômé en Informatique de Gestion, 
+                Génie Logiciel et Intelligence Artificielle.
+            </p>
+
+            <p>
+                À travers ce portfolio, je vous invite à découvrir mon parcours, 
+                mes expériences, ainsi que les compétences que je développe en programmation 
+                et en développement web. Il reflète également mon engagement constant à apprendre, 
+                à évoluer et à relever de nouveaux défis techniques.
+            </p>
+
+            <p>
+                Au fil de mes formations et de mes expériences, 
+                je me suis orienté vers le développement web, 
+                c'est un domaine qui me passionne et dans lequel je continue de progresser.
+            </p>
+
+        </div>
+
+        <!-- Bouton -->
+        <div class="mt-10">
+            <a href="#formation" 
+            class="inline-block px-6 py-3 bg-gradient-to-r from-purple-500 to-blue-500 text-white font-semibold rounded-full hover:scale-105 transition-transform duration-300">
+                Découvrir mes parcours
+            </a>
+        </div>
+
+    </section>
+
+    <section id="formation" class="max-w-6xl mx-auto py-24 px-6">
+        <!-- Titre -->
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-5xl font-bold text-white">
+                Mon parcours académique
+            </h2>
+            <div class="w-20 h-1 bg-gradient-to-r from-purple-500 to-blue-500 mx-auto mt-4 rounded-full"></div>
+        </div>
+
+        <!-- Timeline -->
+        <div class="relative border-l border-white/10">
+
+            <!-- MASTER -->
+            <div class="mb-12 ml-6 opacity-0 translate-y-10 transition-all duration-700 formation-item">
+                <span class="absolute -left-3 flex items-center justify-center w-6 h-6 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full"></span>
+                
+                <div class="bg-[#0a051a] border border-white/10 rounded-2xl p-6 hover:scale-105 transition">
+                    <h3 class="text-xl font-semibold text-white">Master | Institut Supérieur Polytechnique de Madagsacar</h3>
+                    <p class="text-gray-400 mt-2">Informatique de Gestion, Génie Logiciel et Intelligence Artificielle</p>
+                    <span class="text-sm text-purple-400">2023</span>
+                </div>
+            </div>
+
+            <!-- LICENCE -->
+            <div class="mb-12 ml-6 opacity-0 translate-y-10 transition-all duration-700 formation-item">
+                <span class="absolute -left-3 flex items-center justify-center w-6 h-6 bg-blue-500 rounded-full"></span>
+                
+                <div class="bg-[#0a051a] border border-white/10 rounded-2xl p-6 hover:scale-105 transition">
+                    <h3 class="text-xl font-semibold text-white">Licence | Institut Supérieur Polytechnique de Madagsacar</h3>
+                    <p class="text-gray-400 mt-2">Informatique de Gestion, Génie Logiciel et Intelligence Artificielle</p>
+                    <span class="text-sm text-blue-400">2021</span>
+                </div>
+            </div>
+
+            <!-- BAC -->
+            <div class="ml-6 opacity-0 translate-y-10 transition-all duration-700 formation-item">
+                <span class="absolute -left-3 flex items-center justify-center w-6 h-6 bg-purple-500 rounded-full"></span>
+                
+                <div class="bg-[#0a051a] border border-white/10 rounded-2xl p-6 hover:scale-105 transition">
+                    <h3 class="text-xl font-semibold text-white">Baccalauréat | Institution Sainte Famille Mahamasina</h3>
+                    <p class="text-gray-400 mt-2">Série D</p>
+                    <span class="text-sm text-purple-400">2017</span>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="experiences" class="max-w-6xl mx-auto py-24 px-6">
+        <!-- Titre -->
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-5xl font-bold text-white">
+                Expériences professionnelles
+            </h2>
+            <div class="w-20 h-1 bg-gradient-to-r from-purple-500 to-blue-500 mx-auto mt-4 rounded-full"></div>
+            <p class="text-gray-400 mt-6 max-w-2xl mx-auto">
+                Un aperçu de mes expériences en entreprise
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+            <!-- CARD 1 -->
+            <div class="perspective">
+                <div id="card1" class="relative h-[400px] transition-transform duration-700 transform-style-preserve-3d">
+
+                    <!-- FRONT -->
+                    <div class="absolute inset-0 backface-hidden bg-[#0a051a] p-10 rounded-[2.5rem] border border-white/5">
+
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-semibold text-white">
+                                Préstataire Développeur Web
+                            </h3>
+                            <span class="text-xs px-3 py-1 bg-purple-500/10 text-purple-400 rounded-full">
+                                CDD
+                            </span>
+                        </div>
+
+                        <p class="text-purple-400 font-medium">
+                            Entreprise : Madagascar Airlines
+                        </p>
+
+                        <p class="text-gray-400 text-sm mt-1">
+                            📍 Antananarivo, Madagascar
+                        </p>
+
+                        <p class="text-gray-400 mt-4 leading-relaxed">
+                            Développement d’une application web et déploimenent dans le serveur,
+                            optimisation des performances et amélioration de l’UX.
+                        </p>
+
+                        <div class="mt-4 text-sm text-blue-400">
+                            Décembre 2024 - Mars 2025
+                        </div>
+
+                        <div class="flex flex-wrap gap-2 mb-8 mt-4 text-[10px] font-bold tracking-widest uppercase">
+                            <span class="px-3 py-1 bg-white/5 rounded-full border border-white/10">HTML/CSS</span>
+                            <span class="px-3 py-1 bg-white/5 rounded-full border border-white/10">Symfony/PHP</span>
+                            <span class="px-3 py-1 bg-white/5 rounded-full border border-white/10">Stumulus.js</span>
+                            <span class="px-3 py-1 bg-white/5 rounded-full border border-white/10">tailwind</span>
+                        </div>
+
+                        <button onclick="flipCard('card1')"
+                            class="inline-flex items-center text-xs font-bold uppercase tracking-[0.2em] text-purple-400 hover:text-white transition">
+                            View Project <span class="ml-2">→</span>
+                        </button>
+
+                    </div>
+
+                    <!-- BACK -->
+                    <div class="absolute inset-0 backface-hidden rotate-y-180 rounded-[2.5rem] overflow-hidden border border-white/10">
+
+                        <img src="assets/images/digipec2.png"
+                            class="w-full h-full object-cover">
+
+                        <button onclick="flipCard('card1')"
+                            class="absolute top-4 right-4 bg-black/60 text-white px-3 py-1 rounded-lg text-sm">
+                            Back
+                        </button>
+
+                    </div>
+
+                </div>
+            </div>
+
+
+            <!-- CARD 2 -->
+            <div class="perspective">
+                <div id="card2" class="relative h-[400px] transition-transform duration-700 transform-style-preserve-3d">
+
+                    <!-- FRONT -->
+                    <div class="absolute inset-0 backface-hidden bg-[#0a051a] p-10 rounded-[2.5rem] border border-white/5">
+
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-semibold text-white">
+                                Développeur Web
+                            </h3>
+                            <span class="text-xs px-3 py-1 bg-blue-500/10 text-blue-400 rounded-full">
+                                Stage
+                            </span>
+                        </div>
+
+                        <p class="text-purple-400 font-medium">
+                            Entreprise : Madagascar Airlines
+                        </p>
+
+                        <p class="text-gray-400 text-sm mt-1">
+                            📍 Antananarivo, Madagascar
+                        </p>
+
+                        <p class="text-gray-400 mt-4 leading-relaxed">
+                            Conception et développement d’une application web concernant la digitalisation de la
+                            prise en charge des passagers en cas d’irrégularités d’exploitation « DIGIPEC ».
+                        </p>
+
+                        <div class="mt-4 text-sm text-blue-400">
+                            Juillet 2024 - Novembre 2024
+                        </div>
+
+                        <div class="flex flex-wrap gap-2 mb-8 mt-4 text-[10px] font-bold tracking-widest uppercase">
+                            <span class="px-3 py-1 bg-white/5 rounded-full border border-white/10">HTML/CSS</span>
+                            <span class="px-3 py-1 bg-white/5 rounded-full border border-white/10">Symfony/PHP</span>
+                            <span class="px-3 py-1 bg-white/5 rounded-full border border-white/10">Stumulus.js</span>
+                            <span class="px-3 py-1 bg-white/5 rounded-full border border-white/10">Bootstrap</span>
+                        </div>
+
+                        <button onclick="flipCard('card2')"
+                            class="inline-flex items-center text-xs font-bold uppercase tracking-[0.2em] text-blue-400 hover:text-white transition">
+                            View Project <span class="ml-2">→</span>
+                        </button>
+
+                    </div>
+
+                    <!-- BACK -->
+                    <div class="absolute inset-0 backface-hidden rotate-y-180 rounded-[2.5rem] overflow-hidden border border-white/10">
+
+                        <img src="assets/images/digipec.png"
+                            class="w-full h-full object-cover">
+
+                        <button onclick="flipCard('card2')"
+                            class="absolute top-4 right-4 bg-black/60 text-white px-3 py-1 rounded-lg text-sm">
+                            Back
+                        </button>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- CARD 3 -->
+            <div class="perspective">
+                <div id="card3" class="relative h-[400px] transition-transform duration-700 transform-style-preserve-3d">
+
+                    <!-- FRONT -->
+                    <div class="absolute inset-0 backface-hidden bg-[#0a051a] p-10 rounded-[2.5rem] border border-white/5">
+
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-semibold text-white">
+                                Développeur Web
+                            </h3>
+                            <span class="text-xs px-3 py-1 bg-blue-500/10 text-blue-400 rounded-full">
+                                Stage
+                            </span>
+                        </div>
+
+                        <p class="text-purple-400 font-medium">
+                            Entreprise : OMNIS Madagascar
+                        </p>
+
+                        <p class="text-gray-400 text-sm mt-1">
+                            📍 Antananarivo, Madagascar
+                        </p>
+
+                        <p class="text-gray-400 mt-4 leading-relaxed">
+                            Conception et réalisation d’une application web de facturation au niveau 
+                            du laboratoire de l’OMNIS
+                        </p>
+
+                        <div class="mt-4 text-sm text-blue-400">
+                            Mars 2024 - Juillet 2024
+                        </div>
+
+                        <div class="flex flex-wrap gap-2 mb-8 mt-4 text-[10px] font-bold tracking-widest uppercase">
+                            <span class="px-3 py-1 bg-white/5 rounded-full border border-white/10">HTML/CSS</span>
+                            <span class="px-3 py-1 bg-white/5 rounded-full border border-white/10">Symfony/PHP</span>
+                            <span class="px-3 py-1 bg-white/5 rounded-full border border-white/10">Bootstrap</span>
+                        </div>
+
+                        <!-- <button onclick="flipCard('card3')"
+                            class="inline-flex items-center text-xs font-bold uppercase tracking-[0.2em] text-purple-400 hover:text-white transition">
+                            View Project <span class="ml-2">→</span>
+                        </button> -->
+
+                    </div>
+
+                    <!-- BACK -->
+                    <div class="absolute inset-0 backface-hidden rotate-y-180 rounded-[2.5rem] overflow-hidden border border-white/10">
+
+                        <img src="https://images.unsplash.com/photo-1581090700227-1e37b190418e"
+                            class="w-full h-full object-cover">
+
+                        <button onclick="flipCard('card3')"
+                            class="absolute top-4 right-4 bg-black/60 text-white px-3 py-1 rounded-lg text-sm">
+                            Back
+                        </button>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- CARD 4 -->
+            <div class="perspective">
+                <div id="card4" class="relative h-[400px] transition-transform duration-700 transform-style-preserve-3d">
+
+                    <!-- FRONT -->
+                    <div class="absolute inset-0 backface-hidden bg-[#0a051a] p-10 rounded-[2.5rem] border border-white/5">
+
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-semibold text-white">
+                                Développeur Web
+                            </h3>
+                            <span class="text-xs px-3 py-1 bg-blue-500/10 text-blue-400 rounded-full">
+                                Stage
+                            </span>
+                        </div>
+
+                        <p class="text-purple-400 font-medium">
+                            Entreprise : NOGAE Développement
+                        </p>
+
+                        <p class="text-gray-400 text-sm mt-1">
+                            📍 Antananarivo, Madagascar
+                        </p>
+
+                        <p class="text-gray-400 mt-4 leading-relaxed">
+                            Conception et réalisation d’une application web de rédaction des documents
+                            nécessaires à la création d’une société «I-Formalités»
+                        </p>
+
+                        <div class="mt-4 text-sm text-blue-400">
+                            Juillet 2021 - Octobre 2021
+                        </div>
+
+                        <div class="flex flex-wrap gap-2 mb-8 mt-4 text-[10px] font-bold tracking-widest uppercase">
+                            <span class="px-3 py-1 bg-white/5 rounded-full border border-white/10">HTML/CSS</span>
+                            <span class="px-3 py-1 bg-white/5 rounded-full border border-white/10">Laravel/PHP</span>
+                            <span class="px-3 py-1 bg-white/5 rounded-full border border-white/10">Bootstrap</span>
+                        </div>
+
+                        <button onclick="flipCard('card4')"
+                            class="inline-flex items-center text-xs font-bold uppercase tracking-[0.2em] text-purple-400 hover:text-white transition">
+                            View Project <span class="ml-2">→</span>
+                        </button>
+
+                    </div>
+
+                    <!-- BACK -->
+                    <div class="absolute inset-0 backface-hidden rotate-y-180 rounded-[2.5rem] overflow-hidden border border-white/10">
+
+                        <img src="assets/images/iformalites.PNG"
+                            class="w-full h-full object-cover">
+
+                        <button onclick="flipCard('card4')"
+                            class="absolute top-4 right-4 bg-black/60 text-white px-3 py-1 rounded-lg text-sm">
+                            Back
+                        </button>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="competences" class="max-w-6xl mx-auto py-24 px-6">
+
+        <!-- Titre -->
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-5xl font-bold text-white">
+                Mes compétences
+            </h2>
+            <div class="w-20 h-1 bg-gradient-to-r from-purple-500 to-blue-500 mx-auto mt-4 rounded-full"></div>
+        </div>
+
+        <!-- Grid -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <!-- Soft Skills -->
+            <div class="bg-[#0a051a] border border-white/10 p-6 rounded-2xl hover:scale-105 transition">
+                <h3 class="text-xl font-semibold text-purple-400 mb-4">Soft Skills</h3>
+                <ul class="space-y-2 text-gray-400">
+                    <li>✔️ Esprit d’équipe</li>
+                    <li>✔️ Communication</li>
+                    <li>✔️ Adaptabilité</li>
+                    <li>✔️ Gestion du temps</li>
+                    <li>✔️ Esprit d’analyse et réactivité </li>
+                    <li>✔️ Résolution de problèmes</li>
+                </ul>
+            </div>
+
+            <!-- Frontend -->
+            <div class="bg-[#0a051a] border border-white/10 p-6 rounded-2xl hover:scale-105 transition">
+                <h3 class="text-xl font-semibold text-blue-400 mb-4">Frontend</h3>
+                <ul class="space-y-2 text-gray-400">
+                    <li>HTML / CSS</li>
+                    <li>JavaScript</li>
+                    <li>React</li>
+                    <li>Vue</li>
+                    <li>Tailwind CSS</li>
+                    <li>Bootstrap</li>
+                </ul>
+            </div>
+
+            <!-- Backend -->
+            <div class="bg-[#0a051a] border border-white/10 p-6 rounded-2xl hover:scale-105 transition">
+                <h3 class="text-xl font-semibold text-purple-400 mb-4">Backend</h3>
+                <ul class="space-y-2 text-gray-400">
+                    <li>Node.js</li>
+                    <li>PHP</li>
+                    <li>Python</li>
+                    <li>Laravel</li>
+                    <li>Symfony</li>
+                </ul>
+            </div>
+
+            <!-- Bases de données -->
+            <div class="bg-[#0a051a] border border-white/10 p-6 rounded-2xl hover:scale-105 transition">
+                <h3 class="text-xl font-semibold text-blue-400 mb-4">Bases de données</h3>
+                <ul class="space-y-2 text-gray-400">
+                    <li>MySQL</li>
+                    <li>PostgreSQL</li>
+                    <li>SQLite</li>
+                    <li>MongoDB</li>
+                </ul>
+            </div>
+
+            <!-- Outils -->
+            <div class="bg-[#0a051a] border border-white/10 p-6 rounded-2xl hover:scale-105 transition">
+                <h3 class="text-xl font-semibold text-purple-400 mb-4">Outils</h3>
+                <ul class="space-y-2 text-gray-400">
+                    <li>Git / GitHub</li>
+                    <li>Docker</li>
+                    <li>Figma</li>
+                    <li>Adobe XD</li>
+                    <li>Photoshop</li>
+                    <li>VS Code</li>
+                </ul>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="interets" class="max-w-6xl mx-auto py-24 px-6">
+
+        <!-- Titre -->
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-5xl font-bold text-white">
+                Centres d’intérêt
+            </h2>
+            <div class="w-20 h-1 bg-gradient-to-r from-purple-500 to-blue-500 mx-auto mt-4 rounded-full"></div>
+            <p class="text-gray-400 mt-6 max-w-2xl mx-auto">
+                Ce qui m’inspire en dehors du développement.
+            </p>
+        </div>
+
+        <!-- Tags style -->
+        <div class="flex flex-wrap justify-center gap-4">
+
+            <div class="px-5 py-3 rounded-full bg-white/5 border border-white/10 text-gray-300 hover:bg-purple-500/10 hover:border-purple-500 transition">
+                🎬 Cinéma
+            </div>
+
+            <div class="px-5 py-3 rounded-full bg-white/5 border border-white/10 text-gray-300 hover:bg-blue-500/10 hover:border-blue-500 transition">
+                💻 Technologie
+            </div>
+
+            <div class="px-5 py-3 rounded-full bg-white/5 border border-white/10 text-gray-300 hover:bg-purple-500/10 hover:border-purple-500 transition">
+                ⚽ Sport
+            </div>
+
+            <div class="px-5 py-3 rounded-full bg-white/5 border border-white/10 text-gray-300 hover:bg-blue-500/10 hover:border-blue-500 transition">
+                🎨 Design
+            </div>
+
+            <div class="px-5 py-3 rounded-full bg-white/5 border border-white/10 text-gray-300 hover:bg-purple-500/10 hover:border-purple-500 transition">
+                🎮 Jeux vidéo
+            </div>
+
+            <div class="px-5 py-3 rounded-full bg-white/5 border border-white/10 text-gray-300 hover:bg-blue-500/10 hover:border-blue-500 transition">
+                🎵 Musique
+            </div>
+
+            <div class="px-5 py-3 rounded-full bg-white/5 border border-white/10 text-gray-300 hover:bg-purple-500/10 hover:border-purple-500 transition">
+                📚 Apprentissage
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="max-w-6xl mx-auto py-10 px-6 space-y-32">
+        <div class="text-center mb-16">
+            <a href="cv.html" 
+                class="inline-block px-6 py-3 bg-gradient-to-r from-purple-500 to-blue-500 text-white font-semibold rounded-full hover:scale-105 transition-transform duration-300">
+                Voir mon cv en ligne
+            </a>
+        </div>
+    </section>
+
+    <section id="contact" class="max-w-6xl mx-auto py-32 px-6">
+    
+        <div class="text-center mb-16">
+            <h3 class="text-4xl font-bold">Contact</h3>
+            <div class="w-20 h-1 bg-gradient-to-r from-purple-500 to-blue-500 mx-auto mt-4 rounded-full"></div>
+            <p class="text-gray-400 mt-6 max-w-xl mx-auto">
+                Disponible pour des opportunités de stage, CDI ou projets freelance.
+                N’hésite pas à me contacter, je réponds rapidement.
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-12 items-start">
+
+            <!-- Infos contact -->
+            <div class="space-y-6">
+                
+                <div class="bg-[#0a051a] border border-white/10 p-6 rounded-2xl">
+                    <p class="text-gray-400 text-sm">Email</p>
+                    <a href="mailto:ttsiryniaina@gmail.com" class="text-white text-lg hover:text-purple-400 transition">
+                        ttsiryniaina@gmail.com
+                    </a>
+                </div>
+
+                <div class="bg-[#0a051a] border border-white/10 p-6 rounded-2xl">
+                    <p class="text-gray-400 text-sm">Localisation</p>
+                    <p class="text-white text-lg">Antananarivo, Madagascar</p>
+                </div>
+
+                <div class="bg-[#0a051a] border border-white/10 p-6 rounded-2xl">
+                    <p class="text-gray-400 text-sm mb-3">Réseaux</p>
+                    <div class="flex gap-4 text-2xl">
+                        <a href="https://www.facebook.com/tsiriniaina.rasoamiaramanana" target="_blank" class="hover:text-purple-400 transition">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+                        <a href="https://wa.me/261342471025" target="_blank" class="hover:text-blue-400 transition">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/rasoamiaramanana-tsiriniaina-995382209" target="_blank" class="hover:text-white transition">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/NiainaTsix" target="_blank" class="hover:text-white transition">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-[#0a051a] border border-white/10 p-6 rounded-2xl">
+                    <a href="assets/pdf/Cv Tsiry.pdf" download
+                        class="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-500 to-blue-500 text-white font-semibold rounded-full hover:scale-105 transition-transform">
+                        <i class="fa-solid fa-download"></i>
+                        Télécharger mon CV
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- Formulaire -->
+            <form id="contact-form" class="space-y-6 bg-[#0a051a] border border-white/10 p-8 rounded-2xl">
+
+                <div>
+                    <label class="text-gray-400 text-sm">Nom</label>
+                    <input type="text" name="name" placeholder="Ton nom" class="w-full mt-2 p-3 rounded-lg bg-black/40 border border-white/10 text-white focus:outline-none focus:border-purple-500">
+                </div>
+
+                <div>
+                    <label class="text-gray-400 text-sm">Email</label>
+                    <input type="email" name="email" placeholder="tonemail@gmail.com" class="w-full mt-2 p-3 rounded-lg bg-black/40 border border-white/10 text-white focus:outline-none focus:border-purple-500">
+                </div>
+
+                <div>
+                    <label class="text-gray-400 text-sm">Message</label>
+                    <textarea name="message" rows="5" placeholder="Écris ton message..." class="w-full mt-2 p-3 rounded-lg bg-black/40 border border-white/10 text-white focus:outline-none focus:border-purple-500"></textarea>
+                </div>
+
+                <button id="submit-btn" type="submit"
+                    class="w-full py-3 bg-gradient-to-r from-purple-500 to-blue-500 text-white font-semibold rounded-lg hover:scale-105 transition-transform flex items-center justify-center gap-2">
+
+                    <span id="btn-text">Envoyer le message</span>
+
+                    <!-- Loader (caché au départ) -->
+                    <svg id="loader" class="hidden w-5 h-5 animate-spin" viewBox="0 0 24 24">
+                        <circle class="opacity-25" cx="12" cy="12" r="10"
+                            stroke="currentColor" stroke-width="4"></circle>
+                        <path class="opacity-75" fill="currentColor"
+                            d="M4 12a8 8 0 018-8v8H4z"></path>
+                    </svg>
+
+                </button>
+
+            </form>
+
+        </div>
+    </section>
+
+    <footer class="max-w-5xl mx-auto py-20 px-6 border-t border-white/5 text-center">
+        <p class="text-gray-500 text-sm">
+            © 2026 Conçu et codé par <span class="text-white font-medium">Tsiriniaina RASOAMIARAMANANA</span>.
+        </p>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+
+</body>
+</html>
